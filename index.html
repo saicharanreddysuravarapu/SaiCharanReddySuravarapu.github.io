@@ -29,13 +29,21 @@
 
         /* HEADER */
         header {
-            background: linear-gradient(135deg, rgba(30, 60, 114, 0.7), rgba(42, 82, 152, 0.7)), url('Forest.jpg') no-repeat center center/cover; /* Change 'background.jpg' to your image file name */
+            background: linear-gradient(135deg, rgba(30, 60, 114, 0.7), rgba(42, 82, 152, 0.7)), url('Forest.jpg') no-repeat center center/cover;
             color: var(--text-light);
             padding: 50px 20px;
             text-align: center;
             font-size: 2em;
             font-weight: 600;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 1.8em;
+        }
+
+        header p {
+            font-size: 1em;
         }
 
         /* NAVIGATION */
@@ -162,23 +170,23 @@
 
         .contact a {
             text-decoration: none;
-            color: white; /* Change text color */
+            color: white;
             font-weight: bold;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
             font-size: 1.2em;
-            padding: 8px 15px; /* Adjusted padding for smaller button */
-            background: #db4437; /* Change background color to Gmail red */
+            padding: 8px 15px;
+            background: #db4437;
             border-radius: 30px;
             transition: 0.3s;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            margin: 5px; /* Add margin for spacing between buttons */
+            margin: 5px;
         }
 
         .contact a:hover {
-            background: #c13527; /* Darker shade on hover */
+            background: #c13527;
             color: white;
             transform: scale(1.1);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
@@ -186,29 +194,50 @@
 
         /* LinkedIn and GitHub Button Styles */
         .contact a.linkedin {
-            background: #0077b5; /* LinkedIn color */
+            background: #0077b5;
         }
 
         .contact a.linkedin:hover {
-            background: #005582; /* Darker LinkedIn color on hover */
+            background: #005582;
         }
 
         .contact a.github {
-            background: #333; /* GitHub color */
+            background: #333;
         }
 
         .contact a.github:hover {
-            background: #1c1c1c; /* Darker GitHub color on hover */
+            background: #1c1c1c;
         }
 
         /* Responsive Styles */
         @media (max-width: 768px) {
-            nav ul li {
-                display: block;
-                margin: 10px 0;
+            header {
+                padding: 30px 10px;
+                font-size: 1.5em;
             }
 
-            .project, .skills-list li {
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            header p {
+                font-size: 0.9em;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 5px 0;
+            }
+
+            nav ul li a {
+                font-size: 1em;
+            }
+
+            section {
+                padding: 30px 15px;
+            }
+
+            .project {
                 flex-direction: column;
                 align-items: flex-start;
             }
@@ -216,6 +245,11 @@
             .skills-list {
                 flex-direction: column;
                 align-items: center;
+            }
+
+            .contact a {
+                font-size: 1em;
+                padding: 10px;
             }
         }
     </style>
