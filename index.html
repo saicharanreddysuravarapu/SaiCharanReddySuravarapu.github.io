@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sai Charan Reddy Suravarapu | Portfolio</title>
+    
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM6g5n0z5e5c5e5c5e5c5e5c5e5c5e5c5e5c5e" crossorigin="anonymous">
+    
+    <style>
+        :root {
+            --primary-color: #1e3c72;
+            --secondary-color: #2a5298;
+            --background-light: #f0f0f0;
+            --text-dark: #222;
+            --text-light: #fff;
+            --accent-color: #ff6f61;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--background-light);
+            color: var(--text-dark);
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, rgba(30, 60, 114, 0.7), rgba(42, 82, 152, 0.7)), url('Forest.jpg') no-repeat center center/cover; /* Change 'background.jpg' to your image file name */
+            color: var(--text-light);
+            padding: 50px 20px;
+            text-align: center;
+            font-size: 2em;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* NAVIGATION */
+        nav {
+            background: #222;
+            padding: 15px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.3em;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 50px 20px;
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            margin-top: 40px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2em;
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* PROJECTS */
+        .project {
+            background: #e3eaf5;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project i {
+            font-size: 2em;
+            color: var(--secondary-color);
+        }
+
+        .project:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* SKILLS */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills-list li {
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .skills-list li:hover {
+            background: var(--accent-color);
+            transform: scale(1.1);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* FOOTER */
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            font-size: 1.2em;
+        }
+
+        /* CONTACT */
+        .contact {
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        .contact a {
+            text-decoration: none;
+            color: white; /* Change text color */
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 1.2em;
+            padding: 8px 15px; /* Adjusted padding for smaller button */
+            background: #db4437; /* Change background color to Gmail red */
+            border-radius: 30px;
+            transition: 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            margin: 5px; /* Add margin for spacing between buttons */
+        }
+
+        .contact a:hover {
+            background: #c13527; /* Darker shade on hover */
+            color: white;
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* LinkedIn and GitHub Button Styles */
+        .contact a.linkedin {
+            background: #0077b5; /* LinkedIn color */
+        }
+
+        .contact a.linkedin:hover {
+            background: #005582; /* Darker LinkedIn color on hover */
+        }
+
+        .contact a.github {
+            background: #333; /* GitHub color */
+        }
+
+        .contact a.github:hover {
+            background: #1c1c1c; /* Darker GitHub color on hover */
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .project, .skills-list li {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .skills-list {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1><i class="fas fa-code"></i> Sai Charan Reddy Suravarapu</h1>
+        <p>Software Engineer | Software Developer</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+            <li><a href="#projects"><i class="fas fa-laptop-code"></i> Projects</a></li>
+            <li><a href="#skills"><i class="fas fa-tools"></i> Skills</a></li>
+            <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
+            <li><a href="#papers"><i class="fas fa-file-alt"></i> Papers Presented</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am Sai Charan Reddy Suravarapu, a Graduate student at Northwest Missouri State University, pursuing a Master’s in Computer Science. I have a strong passion for software development, problem-solving, and emerging technologies. My academic journey has provided me with hands-on experience in full-stack development, cloud computing, and database management.</p>
+        <p>I completed my Bachelor of Technology (BTech) in Information Technology from SRM Easwari Engineering College, Chennai, India, where I built a solid foundation in data structures, algorithms, object-oriented programming (OOP), and web development. Throughout my education, I have worked on various projects that strengthened my ability to design, develop, and deploy scalable applications.</p>
+        <p>As a highly motivated IT professional, I am proficient in Python, Java, JavaScript, Angular, Node.js, HTML, CSS, and SQL, with hands-on experience in MongoDB, MySQL, and cloud platforms. My expertise includes full-stack web development, API integrations, Agile methodologies, and DevOps tools like Git, Docker, and CI/CD pipelines.</p>
+        <p>I am passionate about continuous learning, innovation, and problem-solving, always seeking opportunities to apply my technical skills to real-world challenges. I am actively exploring opportunities in software development, cloud engineering, and AI-driven solutions where I can contribute effectively while growing professionally.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <i class="fas fa-chart-bar"></i>
+            <div>
+                <h3>Customer Segmentation using K-Means Clustering</h3>
+                <p>Machine Learning</p>
+                <ul>
+                    <li>Implemented clustering algorithms to segment the customer base and tailor product offerings to identified groups using R language.</li>
+                    <li>Visualized the clustered groups to gain insights into customer behavior and spending patterns.</li>
+                    <li>Conducted performance analysis to optimize the clustering process and improve accuracy.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="project">
+            <i class="fas fa-lock"></i>
+            <div>
+                <h3>Hybrid Cryptographic Algorithm to Improve Security in Cloud File Storage</h3>
+                <p>Cloud Computing</p>
+                <ul>
+                    <li>Proposed a hybrid cryptographic algorithm combining two robust cryptographic techniques for enhanced cloud security.</li>
+                    <li>Conducted experiments to validate the efficiency of the proposed algorithm in real-world scenarios.</li>
+                    <li>Compared the performance metrics of the hybrid algorithm with existing algorithms to demonstrate its superiority.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="project">
+            <i class="fas fa-share-alt"></i>
+            <div>
+                <h3>Subscription Sharing System</h3>
+                <p>DBMS Project</p>
+                <ul>
+                    <li>Developed a web application allowing users to interact seamlessly with subscription sharing features.</li>
+                    <li>Designed and normalized the MySQL database to ensure efficient data storage and retrieval.</li>
+                    <li>Integrated backend functionality using Node.js and ensured a responsive front-end interface with HTML and CSS.</li>
+                    <li>Incorporated user authentication and role-based access to enhance application security.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+            <li><i class="fas fa-code"></i> C</li>
+            <li><i class="fas fa-code"></i> Java</li>
+            <li><i class="fas fa-code"></i> JavaScript</li>
+            <li><i class="fas fa-code"></i> Python</li>
+            <li><i class="fas fa-code"></i> React.js</li>
+            <li><i class="fas fa-code"></i> Node.js</li>
+            <li><i class="fas fa-code"></i> HTML</li>
+            <li><i class="fas fa-code"></i> CSS</li>
+            <li><i class="fas fa-database"></i> MySQL</li>
+            <li><i class="fas fa-database"></i> MongoDB</li>
+        </ul>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="project">
+            <i class="fas fa-briefcase"></i>
+            <div>
+                <h3>Full Stack Engineer | LTI Mindtree | Bengaluru, India</h3>
+                <p>April 2023 – Dec 2023</p>
+                <p>The LTI Mindtree Internship provided in-depth exposure to full-stack development, covering backend, frontend, and database technologies. I gained hands-on experience in designing, developing, and deploying web applications using modern frameworks.</p>
+                <h4>Key Contributions & Learnings:</h4>
+                <ul>
+                    <li>Backend Development: Developed RESTful APIs using Node.js and Express, implementing middleware, authentication, and database interactions with MySQL and MongoDB. Applied JDBC for Java-based database connectivity.</li>
+                    <li>Frontend Development: Worked with Angular to create interactive, responsive UI components. Applied HTML, CSS, JavaScript, and TypeScript to build user-friendly web applications.</li>
+                    <li>Database Management: Gained expertise in DBMS, working with both relational (MySQL) and non-relational (MongoDB) databases, performing CRUD operations, indexing, and optimizing queries.</li>
+                    <li>Advanced Java Concepts: Strengthened knowledge of OOP principles, Java Collections Framework, and multi-threading, along with design patterns for scalable software development.</li>
+                    <li>Version Control & Deployment: Used Git for source code management and collaborated via GitHub. Explored Docker for containerized deployments and CI/CD pipelines for automation.</li>
+                    <li>Agile & Problem-Solving: Worked in an Agile development environment, participating in daily standups, sprint planning, and code reviews, enhancing problem-solving and debugging skills.</li>
+                </ul>
+                <p>This experience helped me develop a strong foundation in full-stack engineering, enabling me to work effectively on scalable and optimized web applications.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="papers">
+        <h2>Papers Presented</h2>
+        <div class="project">
+            <i class="fas fa-file-alt"></i>
+            <div>
+                <h3>Hybrid Cryptographic Algorithm to Improve Security in Cloud File Storage</h3>
+                <p>Presented a paper titled “Hybrid cryptographic algorithm to improve security in cloud file storage” for the Department of Computer Science and Engineering in the ICARSI-2023 International Conference organized by Saveetha Engineering College, Chennai, on 21st April 2023.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p class="contact">
+            <a href="mailto:charanreddysuravarapu@gmail.com"><i class="fas fa-envelope"></i> Gmail</a>
+            <a href="https://www.linkedin.com/in/sai-charan-reddy-suravarapu/" target="_blank" class="linkedin"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/saicharanreddysuravarapu" target="_blank" class="github"><i class="fab fa-github"></i> GitHub</a>
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Sai Charan Reddy Suravarapu. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
